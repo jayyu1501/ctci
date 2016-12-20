@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <assert.h>
+
 
 
 using namespace std;
@@ -24,6 +26,10 @@ bool is_unique(string str)
 
 int main(int argc, char **argv)
 {
-  cout << is_unique("abcdefgABCHIJZ") << endl;
-  cout << is_unique("abcdefgABCHIJZa") << endl;
+  assert(is_unique(""));
+  assert(is_unique("a"));
+  assert(!is_unique("aa"));
+  assert(is_unique("abcdefgABCHIJZ"));
+  assert(!is_unique("abcdefgABCHIJZa"));
+  std::cout << "Done:" << argv[0] << std::endl;
 }
