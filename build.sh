@@ -1,7 +1,12 @@
 #!/bin/bash
 
+mkdir -p build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Debug ..
 make
-find $PWD -perm +111 -type f | grep -v "3.7.2" | xargs -n 1 -J % echo %;%
+for EXE in $(find $PWD -perm +111 -type f | grep -v "CMakeFiles")
+do
+    echo "-----$EXE------"
+    $EXE
+done
 
