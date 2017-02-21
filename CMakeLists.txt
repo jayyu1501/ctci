@@ -1,10 +1,27 @@
 cmake_minimum_required(VERSION 2.8)
 
+MACRO(SUBDIRLIST result curdir)
+  FILE(GLOB children RELATIVE ${curdir} ${curdir}/*)
+  SET(dirlist "")
+  FOREACH(child ${children})
+    IF(IS_DIRECTORY ${curdir}/${child})
+       IF(NOT ${child} STREQUAL ".git")
+         IF(NOT ${child} STREQUAL "build")
+           LIST(APPEND dirlist ${child})
+	 ENDIF()
+       ENDIF()
+    ENDIF()
+  ENDFOREACH()
+  SET(${result} ${dirlist})
+ENDMACRO()
+
+
 project (ctci)
 
 
+SUBDIRLIST(SUBDIRS /Users/jinyu/workspace/ctci)
 
 
-
-add_subdirectory(1.1_is_unique)
-add_subdirectory(1_2_is_permulation)
+FOREACH(subdir ${SUBDIRS})
+  ADD_SUBDIRECTORY(${subdir})
+ENDFOREACH()
