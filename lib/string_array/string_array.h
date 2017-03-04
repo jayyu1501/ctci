@@ -5,3 +5,5 @@ using namespace std;
 //1.1
 bool is_unique(const string& str);
 
+//1.2
+bool is_permulation(const string& strA, const string& strB);
