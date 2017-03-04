@@ -1,5 +1,4 @@
 #include <string>
-#include <assert.h>
 #include <sstream>
 
 using namespace std;
@@ -41,11 +40,3 @@ string compress_string(const string& src)
 }
 
 
-int main(int argc, char **argv)
-{
-  assert(compress_string("") == "");
-  assert(compress_string("aa") == "aa");
-  assert(compress_string("aaa") == "a3");
-  assert(compress_string("abc") == "abc");
-  assert(compress_string("aabcccccaaa") == "a2b1c5a3");
-}

@@ -1,5 +1,4 @@
 #include <string>
-#include <assert.h>
 using namespace std;
 
 bool is_substring(const string& str, const string& sub)
@@ -60,17 +59,3 @@ bool is_string_rotation(const string& s1, const string& s2)
   return false;
 }
 
-int main(int argc, char **argv)
-{
-  assert(!is_string_rotation("watbottle", "bottlawat"));
-  assert(is_string_rotation("watbottle", "watbottle"));
-  assert(is_string_rotation("watbottle", "atbottlew"));
-  assert(is_string_rotation("watbottle", "tbottlewa"));
-  assert(is_string_rotation("watbottle", "bottlewat"));
-  assert(is_string_rotation("watbottle", "ottlewatb"));
-  assert(is_string_rotation("watbottle", "ttlewatbo"));
-  assert(is_string_rotation("watbottle", "tlewatbot"));
-  assert(is_string_rotation("watbottle", "lewatbott"));
-  assert(is_string_rotation("watbottle", "ewatbottl"));
-  assert(is_string_rotation("", ""));
-}

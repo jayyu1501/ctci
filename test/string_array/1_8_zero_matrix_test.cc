@@ -1,15 +1,5 @@
-#include <vector>
-#include <assert.h>
-#include <iostream>
-using namespace std;
-
-void fill_zero(vector<vector<int> >& matrix)
-{
-  for(int i = 0; i < matrix.size(); i++)
-  {
-    fill(matrix[i].begin(), matrix[i].end(), 0);
-  }
-}
+#include <gtest/gtest.h>
+#include <string_array/string_array.h>
 
 void print_matrix(vector<vector<int> >& matrix)
 {
@@ -23,25 +13,8 @@ void print_matrix(vector<vector<int> >& matrix)
   }
 }
 
-void zero_matrix(vector<vector<int> >& matrix)
-{
-  for(int i = 0; i < matrix.size(); i++)
-  {
-    for(int j = 0; j < matrix[i].size(); j++)
-    {
-      if (!matrix[i][j])
-      {
-	fill_zero(matrix);
-	return;
-      }
-    }
-  }
-}
 
-
-
-
-int main(int argc, char** argv)
+TEST(TEST_ZERO_MATRIX, ALL)
 {
   vector<vector<int> > m1 = { { 1, 2, 3},
 			      { 4, 5, 6},

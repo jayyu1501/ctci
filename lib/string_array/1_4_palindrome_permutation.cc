@@ -1,4 +1,3 @@
-#include <assert.h>
 #include <string>
 #include <unordered_map>
 
@@ -31,12 +30,3 @@ bool is_palindrome_permutation(const string& str)
   return true;
 }
 
-
-
-int main(int argc, char **argv)
-{
-  assert(is_palindrome_permutation(""));
-  assert(is_palindrome_permutation("    "));
-  assert(!is_palindrome_permutation("abc"));
-  assert(is_palindrome_permutation("Tact Coa"));
-}

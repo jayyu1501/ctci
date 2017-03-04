@@ -1,5 +1,3 @@
-#include <assert.h>
-//#include <unordered_set>
 #include <string>
 using namespace std;
 
@@ -69,16 +67,5 @@ bool is_one_way(const string& strA, const string& strB)
     }
 
   return dist <= 1;
-}
-
-
-int main(int argc, char **argv)
-{
-  assert(is_one_way("pale", "ple"));
-  assert(is_one_way("", ""));
-  assert(is_one_way("pales", "pale"));
-  assert(is_one_way("pale", "bale"));
-  assert(!is_one_way("pale", "bake"));
-  assert(is_one_way("pale", "pale"));
 }
 
