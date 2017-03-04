@@ -1,12 +1,10 @@
+#include "string_array.h"
+
 #include <iostream>
 #include <string>
 #include <assert.h>
 
-
-
-using namespace std;
-
-bool is_unique(string str)
+bool is_unique(const string& str)
 {
   int i = 0;
   int bits[4] = {0};
@@ -24,12 +22,3 @@ bool is_unique(string str)
   return true;
 }
 
-int main(int argc, char **argv)
-{
-  assert(is_unique(""));
-  assert(is_unique("a"));
-  assert(!is_unique("aa"));
-  assert(is_unique("abcdefgABCHIJZ"));
-  assert(!is_unique("abcdefgABCHIJZa"));
-  std::cout << "Done:" << argv[0] << std::endl;
-}
