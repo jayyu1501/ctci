@@ -1,1 +1,2 @@
-add_subdirectory(string_array)
+add_subdirectory(1_string_array)
+add_subdirectory(2_linked_list)

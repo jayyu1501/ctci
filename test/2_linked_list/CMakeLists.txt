@@ -1,4 +1,4 @@
-set(PROJECT_TEST_NAME string_array_test)
+set(PROJECT_TEST_NAME 2_linked_list_test)
 
 file(GLOB SRC_FILES *.cc)
 
@@ -9,7 +9,7 @@ add_executable(${PROJECT_TEST_NAME} ${SRC_FILES})
 #add_dependencies(${PROJECT_TEST_NAME} googletest)
 
 target_link_libraries(${PROJECT_TEST_NAME}
-	string_array_lib
+	linked_list_lib
 	${GTEST_LIBS_DIR}/libgtest.a
         ${GTEST_LIBS_DIR}/libgtest_main.a
 )
