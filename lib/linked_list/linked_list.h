@@ -18,3 +18,7 @@ Node *kth_last(int k, Node *);
 
 //2_3 delete middle nodes
 void delete_mid_node(Node *mid);
+
+//2_4 partition
+Node* partition(Node *head, int val);
+

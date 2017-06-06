@@ -1,5 +1,6 @@
 #include <linked_list/linked_list.h>
 #include <gtest/gtest.h>
+#include <iostream>
 
 using namespace std;
 
@@ -27,6 +28,18 @@ public:
     vector<int> to_vector()
     {
         return dump_data(mHead);
+    }
+
+    void print_data()
+    {
+        Node *p = mHead;
+        cout << "data:";
+        while(p)
+        {
+            cout << p->data  << " ";
+            p = p->next;
+        }
+        cout << endl;
     }
 
     Node* get_nth_node(int n)
