@@ -10,8 +10,7 @@
             "cwd": "${workspaceRoot}/build",
             "environment": [],
             "externalConsole": true,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb"
+            "MIMode": "lldb"
         }
     ]
 }
