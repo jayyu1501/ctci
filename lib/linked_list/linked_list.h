@@ -22,3 +22,6 @@ void delete_mid_node(Node *mid);
 //2_4 partition
 Node* partition(Node *head, int val);
 
+//2_5 sumlist
+Node* sum_list(const Node* first, const Node* second);
+
