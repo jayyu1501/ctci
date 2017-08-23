@@ -2,7 +2,7 @@ set(PROJECT_TEST_NAME 1_string_array_test)
 
 file(GLOB SRC_FILES *.cc)
 
-include_directories(${GTEST_INCLUDE_DIRS})
+#include_directories(${GTEST_INCLUDE_DIRS})
 #include_directories(${PROJECT_SOURCE_DIR}/lib)
 
 add_executable(${PROJECT_TEST_NAME} ${SRC_FILES})
@@ -10,6 +10,4 @@ add_executable(${PROJECT_TEST_NAME} ${SRC_FILES})
 
 target_link_libraries(${PROJECT_TEST_NAME}
 	string_array_lib
-	${GTEST_LIBS_DIR}/libgtest.a
-        ${GTEST_LIBS_DIR}/libgtest_main.a
-)
+	${GTEST_LIB})

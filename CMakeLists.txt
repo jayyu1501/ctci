@@ -14,8 +14,12 @@ SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -std=c++11 -O0")
 #-------------------
 # set common include folder for module
 #-------------------
-set(EXT_PROJECTS_DIR ${PROJECT_SOURCE_DIR}/ext)
-add_subdirectory(${EXT_PROJECTS_DIR}/gtest)
+#set(EXT_PROJECTS_DIR ${PROJECT_SOURCE_DIR}/ext)
+#add_subdirectory(${EXT_PROJECTS_DIR}/gtest)
+
+#google test and google mock
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+add_subdirectory(x_googletest)
 
 include_directories(${PROJECT_SOURCE_DIR}/lib)
 
