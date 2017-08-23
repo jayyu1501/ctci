@@ -16,5 +16,10 @@
             "type": "shell",
             "command": "/usr/bin/make -j 8 all"
         }
+        {
+            "taskName": "runtest",
+            "type": "shell",
+            "command": "test/2_linked_list/2_linked_list_test"
+        }
     ]
 }
