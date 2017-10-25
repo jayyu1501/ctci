@@ -20,9 +20,10 @@ public:
         destroy_linked_list(mHead);
     }
 
-    void create_list(vector<int>& val)
+    Node* create_list(vector<int>& val)
     {
         mHead = create_linked_list(val);
+        return mHead;
     }
 
     vector<int> to_vector()
@@ -63,6 +64,25 @@ public:
             return nullptr;
         }
         return prev;
+    }
+
+    bool is_same(std::initializer_list<int> values, Node* head)
+    {
+        auto it = values.begin();
+        while(head && it != values.end())
+        {
+            if (*it != head->data)
+            {
+                return false;
+            }
+            it++;
+            head = head->next;
+        }
+        if (head || it != values.end())
+        {
+            return false;
+        }
+        return true;
     }
     
     Node *mHead;
