@@ -1,9 +1,12 @@
 {
+    "editor.autoClosingBrackets": true,
     "files.associations": {
         "cstddef": "cpp",
+        "algorithm": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
         "memory": "cpp",
         "utility": "cpp",
-        "string": "cpp",
-        "vector": "cpp"
+        "iterator": "cpp"
     }
 }

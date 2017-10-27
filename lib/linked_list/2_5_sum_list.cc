@@ -1,4 +1,5 @@
 #include "linked_list.h"
+#include <assert.h> 
 
 void add_node(Node *dst, const Node* src, int& from_prev)
 {
@@ -9,6 +10,15 @@ void add_node(Node *dst, const Node* src, int& from_prev)
         src = src->next;
         dst->next = node;
         dst = node;
+    }
+
+    // carry
+    if (from_prev) {
+        Node *newNode = new Node();
+        newNode->data = 1;
+        newNode->next = nullptr;
+        dst->next = newNode;
+        from_prev = 0;
     }
 }
 
@@ -43,8 +53,22 @@ Node* sum_list(const Node* first, const Node* second)
         second = second->next;
     }
 
-    add_node(p, first, from_prev);
-    add_node(p, second, from_prev);
+    if (first) {
+        assert(second == nullptr);
+        add_node(p, first, from_prev);
+    }
 
+    if (second) {
+        assert(first == nullptr);
+        add_node(p, second, from_prev);
+    }
+    
+    // Same len cause carry
+    if (from_prev) {
+        Node *newNode = new Node();
+        newNode->data = 1;
+        newNode->next = nullptr;
+        p->next = newNode;
+    }
     return head;
 }

@@ -24,4 +24,4 @@ Node* partition(Node *head, int val);
 
 //2_5 sumlist
 Node* sum_list(const Node* first, const Node* second);
-
+Node* sum_list_reverse(Node* first, Node* second);
