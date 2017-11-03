@@ -6,7 +6,8 @@ using namespace std;
 
 Node *create_linked_list(const vector<int>& nums);
 void destroy_linked_list(Node* head);
-vector<int> dump_data(Node *head);
+vector<int> dump_data(Node* head);
+void append(Node* left, Node* right);
 
 class BaseTest : public ::testing::Test
 {

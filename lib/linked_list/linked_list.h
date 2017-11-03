@@ -29,3 +29,9 @@ Node* reverse(Node *head);
 
 //2_6 palindrome
 bool is_palindrome(Node* head);
+
+//2_7 intersection
+const Node* get_intersection(const Node* first, const Node* second);
+
+//2_8 
+const Node* get_start_of_loop(const Node* head);

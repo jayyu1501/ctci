@@ -1,5 +1,6 @@
 #include <linked_list/linked_list.h>
 #include "test_util.h"
+#include <cassert>
 
 using namespace std;
 
@@ -58,4 +59,21 @@ vector<int> dump_data(Node *head)
       p = p->next;
     }
   return val;
+}
+
+void append(Node* left, Node* right)
+{
+  if (!left || !right)
+  {
+    return;
+  }
+  Node *prev = nullptr;
+  Node *next = left;
+  while(next)
+  {
+    prev = next;
+    next = next->next;
+  }
+  assert(prev);
+  prev->next = right;
 }
