@@ -11,7 +11,9 @@
                 "/usr/include",
                 "/usr/include/machine",
                 "${workspaceRoot}",
-                "${workspaceRoot}/**/*.hpp"
+                "${workspaceRoot}/**/*.hpp",
+                "${workspaceRoot}/**/*.h",
+                "${workspaceFolder}/lib"
             ],
             "defines": [],
             "browse": {
@@ -29,7 +31,10 @@
             "macFrameworkPath": [
                 "/System/Library/Frameworks",
                 "/Library/Frameworks"
-            ]
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
         }
     ],
     "version": 3

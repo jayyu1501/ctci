@@ -19,6 +19,16 @@
         "unordered_set": "cpp",
         "vector": "cpp",
         "ios": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "exception": "cpp",
+        "__hash_table": "cpp",
+        "__split_buffer": "cpp",
+        "__tree": "cpp",
+        "deque": "cpp",
+        "initializer_list": "cpp",
+        "__config": "cpp",
+        "new": "cpp",
+        "stdexcept": "cpp",
+        "typeinfo": "cpp"
     }
 }

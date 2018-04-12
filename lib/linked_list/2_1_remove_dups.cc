@@ -5,28 +5,27 @@ using namespace std;
 void remove_dups(Node *head)
 {
   if (head == NULL)
-    {
-      return;
-    }
+  {
+    return;
+  }
   
-  Node *p = head;
-  Node *d = NULL;
-  Node *prev = p;
+  Node *prev = nullptr;
+  Node *d = nullptr;
   unordered_set<int> data_set;
-  while(p)
+  while(head)
     {
-      if (data_set.find(p->data) != data_set.end())
-        {
-          d = p;
-          prev->next = p->next;
-          delete d;
-        }
+      if (data_set.find(head->data) != data_set.end())
+      {
+          prev->next = head->next;
+          delete head;
+          head = prev;
+      }
       else
-        {
-          data_set.insert(p->data);
-          prev = p;
-        }
-      p = p->next;
+      {
+        data_set.insert(head->data);
+        prev = head;
+      }
+      head = head->next;
     }
 }
 
